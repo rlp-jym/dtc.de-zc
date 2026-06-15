@@ -1,0 +1,100 @@
+SYNTAX CHEATSHEET,,
+,,
+BASH,,
+Command,What it does,Example
+pwd,Print current directory path,pwd
+ls,List files,ls
+ls -a,List all files (including hidden),ls -a
+ls -l,Long format (permissions size date),ls -l
+cd dir,Change directory,cd 01-docker-terraform
+cd ..,Go up one level,cd ..
+cd ~,Go to home directory,cd ~
+mkdir name,Create directory,mkdir test
+touch file,Create empty file,touch script.py
+rm file,Delete file,rm old.txt
+rm -r folder,Delete folder and contents,rm -r practice
+cp source dest,Copy file,cp file1.txt file2.txt
+mv old new,Move or rename,mv data.csv backup.csv
+cat file,Show file content,cat README.md
+head file,Show first 10 lines,head large.log
+tail file,Show last 10 lines,tail output.txt
+grep pattern file,Search inside file,"grep ""error"" log.txt"
+echo text,Print text,"echo ""Hello"""
+echo text > file,Write/overwrite file,"echo ""Hi"" > greeting.txt"
+echo text >> file,Append to file,"echo ""Bye"" >> greeting.txt"
+command1 | command2,Pipe output to another command,"ls | grep "".py"""
+$(command),Substitute output of command,docker run -v $(pwd):/app
+Ctrl + C,Cancel current command
+Ctrl + L,Clear terminal
+Ctrl + D,Exit terminal/container
+reset,Fix messed-up terminal
+,,
+GIT,,
+Command,What it does,Example
+git status,Show changes (staged/unstaged),git status
+git add file,Stage a file,git add script.py
+git add .,Stage all changes (including deletions),git add .
+git add -A,Stage all changes (same),git add -A
+"git commit -m ""msg""",Commit staged changes,"git commit -m ""fix bug"""
+"git commit --amend -m ""new msg""",Change last commit message (not pushed)
+git push,Upload commits to GitHub,git push
+git pull,Download latest changes from GitHub,git pull
+git diff,Show unstaged changes (content),git diff
+git diff --staged,Show staged changes (will be committed),git diff --staged
+git log --oneline,Show commit history (compact),git log --oneline
+git log --oneline --graph,Show branches visually
+git restore file,Discard unstaged changes,git restore script.py
+git restore --staged file,Unstage a file (keep changes),git restore --staged script.py
+git rm file,Delete file and stage deletion,git rm old.txt
+git branch,List branches,git branch
+git checkout -b new,Create and switch to new branch,git checkout -b feature
+git checkout main,Switch to main branch,git checkout main
+git merge branch,Merge another branch into current,git merge feature
+git clone url,Copy remote repo to local,git clone https://github.com/user/repo
+,,,,,,
+PYTHON,,,,,,
+Concept,Syntax,Example
+Print,print(),"print(""Hello"")"
+Variables,name = value,age = 25
+Input,input(),"name = input(""Name: "")"
+Condition,if/elif/else,"if x > 0: print(""positive"")"
+Loop,for item in list:,for i in range(5): print(i)
+While loop,while condition:,while x < 10: x += 1
+List,"[1,2,3]","fruits = [""apple"",""banana""]",,,,
+Dict,"{""key"":""value""}","person = {""name"":""Alice"",""age"":30}",,,,
+Function,def name():,"def greet(): print(""Hi"")",,,,
+Return value,return,"def add(a,b): return a+b",,,,
+String repeat,"""str"" * n","""ha"" * 3 -> ""hahaha""",,,,
+String concat,+,"""5"" + ""3"" -> ""53"""
+Write (file),"with open(file, 'w') as f: f.write(text)","with open(""data.txt"", ""w"") as f: f.write(""hello"")"
+Append (file),"with open(file, 'a') as f: f.write(text)","with open(""data.txt"", ""a"") as f: f.write(""more"")"
+Read all file,"with open(file, 'r') as f: content = f.read()","with open(""data.txt"", ""r"") as f: content = f.read()",,,,
+Read lines,lines = f.readlines(),"with open(""data.txt"") as f: lines = f.readlines()",,,,
+Pathlib import,from pathlib import Path,from pathlib import Path,,,,
+Path.cwd(),current = Path.cwd(),current = Path.cwd(),,,,
+Path.iterdir(),for p in current.iterdir():,for p in current.iterdir(): print(p),,,,
+Path.is_file(),if p.is_file():,if p.is_file(): print(p.name),,,,
+Path.name,p.name,print(p.name),,,,
+Path.read_text(),"text = Path(""file.txt"").read_text()","content = Path(""info.txt"").read_text()",,,,
+Run script,python script.py,python my_script.py,,,,
+Run one-liner,"python -c ""code""","python -c ""print(3 * 'ha')""",,,,
+Interactive python,python then exit(),"type python, then exit()",,,,
+,,,,,,
+DOCKER,,,,,,
+Command,What it does,Example
+docker run image,Create and start container from image,docker run hello-world
+docker run -it image,Interactive with terminal,docker run -it ubuntu
+docker run -it --rm image,Auto‑remove container after exit,docker run -it --rm python:3.9.16-slim
+docker run -v host:container,Bind mount (share files),docker run -v $(pwd):/app
+docker run --entrypoint=cmd,Override default command,docker run --entrypoint=bash
+docker ps,List running containers,docker ps
+docker ps -a,List all containers (including stopped),docker ps -a
+docker rm container_id,Delete a container,docker rm 92cf116b25cc
+docker rm $(docker ps -aq),Delete all containers
+docker images,List downloaded images,docker images
+docker rmi image,Delete an image,docker rmi python:3.9.16-slim
+docker exec -it container bash,Run command in running container
+,,,,,,
+Made by DeepSeek
+Practice along the way,
+Correct/update as needed
