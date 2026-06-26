@@ -1,0 +1,31 @@
+volumes:
+  nytaxi_postgres_data:
+    driver: local
+
+services:
+  pgdatabase:
+    image: postgres:17
+    environment:
+      POSTGRES_USER: nytaxi
+      POSTGRES_PASSWORD: nytaxi
+      POSTGRES_DB: nytaxi_database
+    ports:
+      - "5432:5432"
+    volumes:
+      - nytaxi_postgres_data:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U nytaxi -d nytaxi"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+
+  pgadmin:
+    image: dpage/pgadmin4
+    environment:
+      - PGADMIN_DEFAULT_EMAIL=nytaxi@nytaxi.com
+      - PGADMIN_DEFAULT_PASSWORD=nytaxi
+    ports:
+      - "8085:80"
+    depends_on:
+      pgdatabase:
+        condition: service_started

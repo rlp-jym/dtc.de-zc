@@ -1,0 +1,46 @@
+[0m00:49:19.842824 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002B176ACAA50>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002B17B1946B0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002B1795B41D0>]}
+
+
+============================== 00:49:19.882776 | cbb19229-be3c-4fe2-b944-a935e83c2b52 ==============================
+[0m00:49:19.882776 [info ] [MainThread]: Running with dbt=1.11.11
+[0m00:49:19.883804 [debug] [MainThread]: running dbt with arguments {'version_check': 'True', 'no_print': 'None', 'static_parser': 'True', 'target_path': 'None', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'printer_width': '80', 'write_json': 'True', 'introspect': 'True', 'log_cache_events': 'False', 'empty': 'None', 'cache_selected_only': 'False', 'log_format': 'default', 'debug': 'False', 'fail_fast': 'False', 'partial_parse': 'True', 'send_anonymous_usage_stats': 'True', 'quiet': 'False', 'warn_error': 'None', 'profiles_dir': 'C:\\Users\\ralph\\.dbt', 'indirect_selection': 'eager', 'invocation_command': 'dbt init', 'use_colors': 'True', 'use_experimental_parser': 'False', 'log_path': 'logs'}
+[0m00:50:30.693010 [debug] [MainThread]: Starter project path: C:\GitHub\rlp-jym-projects\dtc.de-zc\dbt\.venv\Lib\site-packages\dbt\include\starter_project
+[0m00:50:30.736041 [info ] [MainThread]: 
+Your new dbt project "nytaxi" was created!
+
+For more information on how to configure the profiles.yml file,
+please consult the dbt documentation here:
+
+  https://docs.getdbt.com/docs/configure-your-profile
+
+One more thing:
+
+Need help? Don't hesitate to reach out to us via GitHub issues or on Slack:
+
+  https://community.getdbt.com/
+
+Happy modeling!
+
+[0m00:50:30.737003 [info ] [MainThread]: Setting up your profile.
+[0m00:55:07.544840 [info ] [MainThread]: Profile nytaxi written to C:\Users\ralph\.dbt\profiles.yml using target's profile_template.yml and your supplied values. Run 'dbt debug' to validate the connection.
+[0m00:55:07.545846 [debug] [MainThread]: Command `dbt init` succeeded at 00:55:07.545846 after 347.84 seconds
+[0m00:55:07.546826 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002B17B5D3380>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002B17B02DEE0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002B17B3D7B60>]}
+[0m00:55:07.546826 [debug] [MainThread]: Flushing usage events
+[0m00:55:08.564456 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m00:55:45.912673 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001E721786C30>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001E724AD8BF0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001E724AD9040>]}
+
+
+============================== 00:55:45.922686 | 4513efcb-c3e0-40b5-b972-74dd89f77522 ==============================
+[0m00:55:45.922686 [info ] [MainThread]: Running with dbt=1.11.11
+[0m00:55:45.923688 [debug] [MainThread]: running dbt with arguments {'static_parser': 'True', 'no_print': 'None', 'version_check': 'True', 'target_path': 'None', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'printer_width': '80', 'write_json': 'True', 'empty': 'None', 'log_cache_events': 'False', 'introspect': 'True', 'cache_selected_only': 'False', 'log_format': 'default', 'debug': 'False', 'fail_fast': 'False', 'partial_parse': 'True', 'send_anonymous_usage_stats': 'True', 'quiet': 'False', 'warn_error': 'None', 'profiles_dir': 'C:\\Users\\ralph\\.dbt', 'invocation_command': 'dbt debug', 'indirect_selection': 'eager', 'use_colors': 'True', 'use_experimental_parser': 'False', 'log_path': 'logs'}
+[0m00:55:46.105734 [info ] [MainThread]: dbt version: 1.11.11
+[0m00:55:46.106696 [info ] [MainThread]: python version: 3.12.13
+[0m00:55:46.106696 [info ] [MainThread]: python path: C:\GitHub\rlp-jym-projects\dtc.de-zc\dbt\.venv\Scripts\python.exe
+[0m00:55:46.106696 [info ] [MainThread]: os info: Windows-11-10.0.26200-SP0
+[0m00:55:46.113763 [error] [MainThread]: Encountered an error:
+Parsing Error
+  Env var required but not provided: 'SUPABASE_S3_KEY'
+[0m00:55:46.114815 [debug] [MainThread]: Command `dbt debug` failed at 00:55:46.114815 after 0.35 seconds
+[0m00:55:46.115813 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001E724BAE9C0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001E7266CDDF0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001E726676690>]}
+[0m00:55:46.115813 [debug] [MainThread]: Flushing usage events
+[0m00:55:47.081771 [debug] [MainThread]: An error was encountered while trying to flush usage events
